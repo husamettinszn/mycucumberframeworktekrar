@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -55,6 +56,15 @@ public class AmazonStepDefinitions {
     }
 
 
+    @And("{string} icin arama yapar")
+    public void icinAramaYapar(String kelime) {
+        amazonPage.searchBox.sendKeys(kelime+Keys.ENTER);
+    }
+
+    @Then("sonucun {string} icerdigini test eder")
+    public void sonucunIcerdiginiTestEder(String kelime) {
+        Assert.assertTrue(amazonPage.sonucYaziElementi.getText().contains(kelime));
+    }
 }
 
 
