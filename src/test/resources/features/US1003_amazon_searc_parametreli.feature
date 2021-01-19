@@ -13,3 +13,9 @@ Feature: US1003amazon_search_parametreli
     And "sozenler" icin arama yapar
     Then sonucun "sozenler" icerdigini test eder
     Then kullanici sayfayi kapatir
+
+    Scenario:
+      When kullanici amazon sayfaya gider
+      And "zeka kupu" icin arama yapar
+      Then sonucun "zeka kupu" icerdigini test eder
+      Then kullanici sayfayi kapatir
