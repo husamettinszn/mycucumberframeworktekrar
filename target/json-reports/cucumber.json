@@ -1,0 +1,91 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-27T15:45:17.656Z",
+        "line": 4,
+        "name": "TC_21 kullanici veri okur",
+        "description": "",
+        "id": "us1014-dbread;tc-21-kullanici-veri-okur",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.sql.SQLException: No suitable driver found for jdbc:sqlserver://184.168.194.58:1433;databaseName\u003dcrystalkeyhotels2; user\u003dAhmet_User;password\u003dAhmet123!\r\n\tat java.sql.DriverManager.getConnection(DriverManager.java:689)\r\n\tat java.sql.DriverManager.getConnection(DriverManager.java:247)\r\n\tat dbStepDefinitions.DbReadStepDefinitions.kullanici_ck_hotels_veritabanina_baglanir(DbReadStepDefinitions.java:20)\r\n\tat ✽.kullanici CK_Hotels veritabanina baglanir(file:///C:/Users/Husamettin/IdeaProjects/mycucumberframeworktekrar/src/test/resources/features/US1014_DbRead.feature:6)\r\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "kullanici CK_Hotels veritabanina baglanir",
+            "match": {
+              "location": "dbStepDefinitions.DbReadStepDefinitions.kullanici_ck_hotels_veritabanina_baglanir()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "kullanici \"tHOTELROOM\" tablosundaki \"Price\" verilerini alir",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tHOTELROOM\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"Price\"",
+                  "offset": 36
+                }
+              ],
+              "location": "dbStepDefinitions.DbReadStepDefinitions.kullanici_tablosundaki_verilerini_alir(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "kullanici \"Price\" sutunundaki verileri okur",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Price\"",
+                  "offset": 10
+                }
+              ],
+              "location": "dbStepDefinitions.DbReadStepDefinitions.kullanici_sutunundaki_verileri_okur(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@db"
+          },
+          {
+            "name": "@ah"
+          }
+        ]
+      }
+    ],
+    "name": "US1014_DbRead",
+    "description": "",
+    "id": "us1014-dbread",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/US1014_DbRead.feature",
+    "tags": [
+      {
+        "name": "@db",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
